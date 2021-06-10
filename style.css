@@ -12,6 +12,14 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
+.visible {
+    display:block;
+}
+
+.invisible {
+    display:none;
+}
+
 #tanya-section {
     display:none;
 }

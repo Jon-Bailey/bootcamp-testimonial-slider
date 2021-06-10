@@ -19,7 +19,10 @@
 
   <section id="tanya-section">
     <header>
-      <button class=slider-button></button>
+      <button class=slider-button>
+        <img id="icon-prev" onclick="switchProfile()" class="button-icon" src="images/icon-prev.svg">
+        <img id="icon-next" onclick="switchProfile()" class="button-icon" src="images/icon-next.svg">
+      </button>
       <img id="tanya-image" src="images/image-tanya.jpg" alt="tanya">
     </header>
     <article>
@@ -34,8 +37,8 @@
   <section id="john-section">
     <header>
       <button class=slider-button>
-        <img id="icon-prev" class="button-icon" src="images/icon-prev.svg">
-        <img id="icon-next" class="button-icon" src="images/icon-next.svg">
+        <img id="icon-prev" onclick="switchProfile()" class="button-icon" src="images/icon-prev.svg">
+        <img id="icon-next" onclick="switchProfile()" class="button-icon" src="images/icon-next.svg">
       </button>
       <img id="john-image" src="images/image-john.jpg" alt="john">
     </header>
