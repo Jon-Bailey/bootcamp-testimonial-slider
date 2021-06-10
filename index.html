@@ -17,10 +17,10 @@
 </head>
 <body>
 
-  <section class="tanya-section">
+  <section id="tanya-section">
     <header>
-    <button class=slider-button></button>
-    <img id="tanya-image" src="images/image-tanya.jpg" alt="tanya">
+      <button class=slider-button></button>
+      <img id="tanya-image" src="images/image-tanya.jpg" alt="tanya">
     </header>
     <article>
       <p class="paragraph">“ I’ve been interested in coding for a while but never taken the jump, until now. 
@@ -31,9 +31,14 @@
     </article>
     </section>
 
-  <section class="john-section">
-    <button class=slider-button></button>
-    <img id="john-image" src="images/image-john.jpg" alt="john">
+  <section id="john-section">
+    <header>
+      <button class=slider-button>
+        <img id="icon-prev" class="button-icon" src="images/icon-prev.svg">
+        <img id="icon-next" class="button-icon" src="images/icon-next.svg">
+      </button>
+      <img id="john-image" src="images/image-john.jpg" alt="john">
+    </header>
     <article>
       <p class="paragraph">“ If you want to lay the best foundation possible I’d recommend taking this course. 
       The depth the instructors go into is incredible. I now feel so confident about 
@@ -43,14 +48,12 @@
     </article>
     </section>
 
-    <footer>
+  <footer class="bottom-curve"></footer>
 
-    </footer>
-
-  <div class="attribution">
+  <!--<div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Jon Bailey</a>.
-  </div>
-
+  </div>-->
+<script src="script.js"></script>
 </body>
 </html>
