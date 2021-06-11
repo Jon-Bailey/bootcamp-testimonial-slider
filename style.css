@@ -12,20 +12,19 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
-.visible {
-    display:block;
-}
-
-.invisible {
-    display:none;
+main {
+    display:flex;
+    flex-direction:column;
 }
 
 #tanya-section {
     display:none;
+    transition: all 1s;
 }
 
 #john-section {
     display:block;
+    transition: all 1s;
 }
 
 section {
@@ -86,10 +85,13 @@ p {
 }
 
 .button-icon {
-    width:15px;
-    height:auto;
+    width:10.5px;
     box-shadow:none;
     cursor:pointer;
+}
+
+#icon-next {
+    width:11px;
 }
 
 img {
