@@ -12,18 +12,13 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
-main {
-    display:flex;
-    flex-direction:column;
-}
-
 #tanya-section {
     display:none;
     transition: all 1s;
 }
 
 #john-section {
-    display:block;
+    visibility:visible;
     transition: all 1s;
 }
 
@@ -38,8 +33,14 @@ main {
     transition: visibility 0s linear 0s, opacity 300ms;
   }
 
+main {
+    display:flex;
+    justify-content:center;
+}
+
 section {
     text-align:center;
+    height:100vh;
 }
 
 header {
@@ -137,35 +138,29 @@ img {
     height:100px;
     bottom:0px;
     position:absolute;
+    left:0;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1100px) {
 
-    main {
-        margin:auto;
-        justify-content:space-around;
-    }
     section {
         text-align:left;
         display:flex;
+        flex-direction:row-reverse;
         align-items:center;
-        justify-content:center;
+        margin:auto;
+        justify-content:space-between;
     }
 
     p {
         text-align:left;
-        margin:0;
-        z-index:2;
         background-position:left;
     }
 
-    header {
-        max-width:50%;
-        margin:0px;
-        float:right;
-    }
-
     article {
-
+        max-width:50%;
+        height:max-content;
+        margin:auto;
+        z-index:2;
     }
 }

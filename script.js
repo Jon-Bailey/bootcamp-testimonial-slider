@@ -1,7 +1,5 @@
-const tanyaSection = document.getElementById("tanya-section");
-const johnSection = document.getElementById("john-section");
-
-/*const testimonials = [
+// Testimonial data to be displayed
+const testimonials = [
     {
         id:0,
         name:"John Tarkpor",
@@ -17,9 +15,53 @@ const johnSection = document.getElementById("john-section");
         title:"UX Engineer"
     }];
 
+// Load first testimonial on page load
+    loadData = () => {
     document.querySelector("#paragraph").innerHTML = testimonials[0].text;
+    document.getElementById("name").innerHTML = testimonials[0].name;
+    document.getElementById("title").innerHTML = testimonials[0].title;
+    document.querySelector("#image").setAttribute("src", testimonials[0].image );
+    i = testimonials[0].id;
+    }
+
+    
+
+// On button press   
+    switchProfile = (i) => {
+    document.querySelector("#paragraph").innerHTML = testimonials[i].text;
+    document.getElementById("name").innerHTML = testimonials[i].name;
+    document.getElementById("title").innerHTML = testimonials[i].title;
+    document.querySelector("#image").setAttribute("src", testimonials[i].image );
+    }
+
+    loadData();
+
+    document.querySelector("#icon-next").addEventListener("click", function(){
+        i--;
+        if (i < 0) {
+            i = testimonials.length-1;
+        }
+        switchProfile(i);
+    });
+
+    document.querySelector("#icon-prev").addEventListener("click", function(){
+        i++;
+        if (i > testimonials.lenth -1) {
+        i = 0;
+        }
+        switchProfile(i);
+    });
+
+
+// OTHER STUFF I TRIED    
+
+/*const tanyaSection = document.getElementById("tanya-section");
+const johnSection = document.getElementById("john-section");
+const prevButton = document.getElementById("icon-prev");
+const nextButton = document.getElementById("icon-next");
 */
 
+/*
 // when buttons are pressed, toggle sections from display block to display none
 switchProfile = () => {
     if (johnSection.style.display === "none") {
@@ -31,10 +73,9 @@ switchProfile = () => {
     }
 }
 
-/*
 toggleVisible = () => {
-    if (this.parentElement.style.visibility === "visible") {
-        this.parentElement.classList.add(".m-fadeIn");
+    if (this.parentElement.style.display == "block" || "flex") {
+        this.parentElement.style.display.add("none");
     } else {
         this.parentElement.classList.add(".m-fadeOut");
     }
