@@ -14,6 +14,7 @@ const testimonials = [
         image:"images/image-tanya.jpg",
         title:"UX Engineer"
     }];
+    
 
 // Load first testimonial on page load
     loadData = () => {
@@ -23,8 +24,6 @@ const testimonials = [
     document.querySelector("#image").setAttribute("src", testimonials[0].image );
     i = testimonials[0].id;
     }
-
-    
 
 // On button press   
     switchProfile = (i) => {
@@ -39,7 +38,7 @@ const testimonials = [
     document.querySelector("#icon-next").addEventListener("click", function(){
         i--;
         if (i < 0) {
-            i = testimonials.length-1;
+            i = testimonials.length -1;
         }
         switchProfile(i);
     });
