@@ -164,8 +164,8 @@ footer {
         height:max-content;
         margin:auto;
         z-index:2;
-        position:absolute;
-        left:2%;
+        position:relative;
+        left:10%;
     }
 
     .headings {
